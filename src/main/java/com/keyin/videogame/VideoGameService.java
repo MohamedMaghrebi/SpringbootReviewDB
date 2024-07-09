@@ -18,6 +18,11 @@ public class VideoGameService {
     public VideoGame findGameByTitle(String title){
         return videoGameRepository.findByTitle(title);
     }
+
+    public void createNewGame(VideoGame videoGame) {
+
+        videoGameRepository.save(videoGame);
+    }
     // Instead Of Using A List For Our Memory We Will USe The Repository
     //List<VideoGame> videoGameList;
 
